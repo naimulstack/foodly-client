@@ -39,14 +39,7 @@ export default function LoginPage() {
             callbackURL: "/",
         });
 
-        if (error) {
-            toast.error(error.message || "Login failed!");
-            setLoading(false);
-            return;
-        }
-
         toast.success("Login successful!");
-
         router.push("/");
         router.refresh();
     };
@@ -58,11 +51,6 @@ export default function LoginPage() {
             provider: "google",
             callbackURL: "/?googleSignIn=success",
         });
-
-        if (error) {
-            toast.error(error.message || "Google login failed!");
-            setGoogleLoading(false);
-        }
     };
 
     return (
