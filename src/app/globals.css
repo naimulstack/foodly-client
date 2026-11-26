@@ -7,3 +7,4 @@
 @theme inline {
   --font-sans: var(--font-outfit);
 }
+@import "@heroui/styles"; 
